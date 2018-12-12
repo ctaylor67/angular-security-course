@@ -1,11 +1,11 @@
 
 
 
-import moment = require("moment");
+import moment = require('moment');
 const util = require('util');
 const crypto = require('crypto');
 import * as jwt from 'jsonwebtoken';
-import * as fs from "fs";
+import * as fs from 'fs';
 
 
 

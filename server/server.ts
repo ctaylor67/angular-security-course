@@ -1,14 +1,14 @@
 
 
 import * as express from 'express';
-import {Application} from "express";
+import {Application} from 'express';
 import * as fs from 'fs';
 import * as https from 'https';
-import {readAllLessons} from "./read-all-lessons.route";
-import {createUser} from "./create-user.route";
-import {getUser} from "./get-user.route";
-import {logout} from "./logout.route";
-import {login} from "./login.route";
+import {readAllLessons} from './read-all-lessons.route';
+import {createUser} from './create-user.route';
+import {getUser} from './get-user.route';
+import {logout} from './logout.route';
+import {login} from './login.route';
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 
@@ -53,14 +53,13 @@ if (options.secure) {
     }, app);
 
     // launch an HTTPS Server. Note: this does NOT mean that the application is secure
-    httpsServer.listen(9000, () => console.log("HTTPS Secure Server running at https://localhost:" + httpsServer.address().port));
+    httpsServer.listen(9000, () => console.log('HTTPS Secure Server running at https://localhost:' + httpsServer.address().port));
 
-}
-else {
+} else {
 
     // launch an HTTP Server
     const httpServer = app.listen(9000, () => {
-        console.log("HTTP Server running at https://localhost:" + httpServer.address().port);
+        console.log('HTTP Server running at https://localhost:' + httpServer.address().port);
     });
 
 }
