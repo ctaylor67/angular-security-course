@@ -1,6 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
 import { decodeJwt } from './security.utils';
-import { ɵangular_packages_platform_browser_dynamic_platform_browser_dynamic_a } from '@angular/platform-browser-dynamic';
 
 export function retreiveIdFromRequest(req: Request, res: Response, next: NextFunction) {
   const jwt = req.cookies['SESSIONID'];
@@ -12,6 +11,8 @@ export function retreiveIdFromRequest(req: Request, res: Response, next: NextFun
         console.error(err);
         next();
       });
+  } else {
+    next();
   }
 }
 
