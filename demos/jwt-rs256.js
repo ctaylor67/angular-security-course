@@ -12,12 +12,12 @@ var payload = {
 
 var token = jwt.sign(payload, privateKey, {
     algorithm: 'RS256',
-    expiresIn: 120,
+    expiresIn: 120, // seconds
     subject: "1"
 });
 
 
-console.log('RSA 256 JWT', token);
+console.log('RSA 256 JWT\n\n',token);
 
 
 
